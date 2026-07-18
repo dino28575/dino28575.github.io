@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sahib Dino | Data Analyst & Scientist</title>
+  <meta name="description"
+    content="Portfolio of Sahib Dino — Physics Graduate turned Data Analyst. Expert in Python, SQL, Power BI, Machine Learning & data storytelling.">
+  <meta property="og:title" content="Sahib Dino | Data Analyst & Scientist">
+  <meta property="og:description"
+    content="Turning data into decisions. Physics graduate with real banking-world analytics experience.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- Cursor glow -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- Particle canvas -->
+  <canvas id="particleCanvas"></canvas>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <a href="#home" class="nav-logo">SD<span class="logo-accent">.</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" class="nav-link">Home</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#experience" class="nav-link">Experience</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+    <a href="SahibCv.06.26.pdf" download class="btn-resume">
+      <i class="fas fa-file-arrow-down"></i> Resume
+    </a>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile nav -->
+  <div class="mobile-backdrop" id="mobileBackdrop"></div>
+  <div class="mobile-nav" id="mobileNav">
+    <button class="mobile-close" id="mobileClose"><i class="fas fa-times"></i></button>
+    <ul>
+      <li><a href="#home" class="mob-link">Home</a></li>
+      <li><a href="#about" class="mob-link">About</a></li>
+      <li><a href="#experience" class="mob-link">Experience</a></li>
+      <li><a href="#projects" class="mob-link">Projects</a></li>
+      <li><a href="#contact" class="mob-link">Contact</a></li>
+    </ul>
+    <a href="SahibCv.06.26.pdf" download class="mob-cv-btn">Download CV</a>
+  </div>
+
+  <!-- ===== HERO ===== -->
+  <section id="home" class="hero">
+    <div class="hero-container">
+
+      <!-- LEFT: Text -->
+      <div class="hero-text" data-aos="fade-right">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          <span>Open to Data Analyst Roles</span>
+        </div>
+
+        <h1 class="hero-name">
+          <span class="name-white">SAHIB</span><br>
+          <span class="name-gold">DINO</span>
+        </h1>
+
+        <div class="hero-role-row">
+          <div class="role-line"></div>
+          <span class="hero-role" id="typedText">Data Analyst &amp; Scientist</span>
+        </div>
+
+        <p class="hero-bio">
+          Physics Graduate turned Data Analyst with real banking-world experience.
+          I bridge the gap between raw data and decisions through automation,
+          predictive modeling, and evidence-based analysis.
+        </p>
+
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-num" data-target="30">0</span><span class="stat-sym">%</span>
+            <span class="stat-lbl">Faster Reporting</span>
+          </div>
+          <div class="stat-sep"></div>
+          <div class="stat">
+            <span class="stat-num" data-target="4">0</span><span class="stat-sym">+</span>
+            <span class="stat-lbl">Projects Done</span>
+          </div>
+          <div class="stat-sep"></div>
+          <div class="stat">
+            <span class="stat-num" data-target="3">0</span><span class="stat-sym">+</span>
+            <span class="stat-lbl">Certifications</span>
+          </div>
+        </div>
+
+        <div class="hero-cta">
+          <a href="#projects" class="btn-primary">
+            <span>View Projects</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+          <a href="SahibCv.06.26.pdf" download class="btn-ghost">
+            <i class="fas fa-file-arrow-down"></i>
+            <span>Download CV</span>
+          </a>
+          <div class="icon-btns">
+            <a href="https://github.com/dino28575" target="_blank" class="icon-btn" title="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/sahib-dino-675a90221" target="_blank" class="icon-btn"
+              title="LinkedIn">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: Photo -->
+      <div class="hero-photo-side" data-aos="fade-left">
+        <div class="photo-frame">
+          <div class="photo-ring"></div>
+          <div class="photo-inner">
+            <img src="sahib-photo.jpg" alt="Sahib Dino — Data Analyst" class="hero-img" id="heroPhoto">
+          </div>
+          <!-- Scanning line animation -->
+          <div class="scan-line"></div>
+        </div>
+
+        <!-- Floating data cards -->
+        <div class="float-chip chip-top-left">
+          <i class="fas fa-chart-line"></i>
+          <span>0.65 PR-AUC</span>
+        </div>
+        <div class="float-chip chip-bottom-right">
+          <i class="fab fa-python"></i>
+          <span>Python · SQL · R</span>
+        </div>
+        <div class="float-chip chip-bottom-left">
+          <i class="fas fa-brain"></i>
+          <span>XGBoost + SHAP</span>
+        </div>
+
+        <!-- Orbit ring -->
+        <div class="orbit-ring">
+          <div class="orbit-dot"></div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Scroll indicator -->
+    <a href="#about" class="scroll-down">
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+      <span>Scroll</span>
+    </a>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="sec-header" data-aos="fade-up">
+        <span class="sec-tag">ABOUT ME</span>
+        <h2 class="sec-title">The Story Behind <span class="gold">the Data</span></h2>
+      </div>
+
+      <div class="about-layout">
+        <div class="about-text" data-aos="fade-right">
+          <p>I began my journey in <strong>Physics</strong>, building a rigorous foundation in mathematical modeling,
+            hypothesis testing, and analytical thinking. That scientific mindset became my superpower when I
+            transitioned into data analytics.</p>
+          <p>Today at <strong>Askari Bank</strong>, I engineer data pipelines, automate workflows, and translate
+            fragmented datasets into compliance-ready reports — delivering real efficiency gains that matter.</p>
+          <p>I specialize in uncovering the <em>why</em> behind the data — whether that's customer churn, HR attrition,
+            or network quality.</p>
+
+          <div class="skills-wrap">
+            <div class="skill-pill"><i class="devicon-python-plain colored"></i> Python</div>
+            <div class="skill-pill"><i class="fas fa-database"></i> SQL</div>
+            <div class="skill-pill"><i class="devicon-pandas-plain"></i> Pandas</div>
+            <div class="skill-pill"><i class="devicon-r-plain colored"></i> R</div>
+            <div class="skill-pill"><i class="fas fa-chart-bar" style="color:#F2C811"></i> Power BI</div>
+            <div class="skill-pill"><i class="fas fa-table" style="color:#0077b5"></i> Tableau</div>
+            <div class="skill-pill"><i class="fas fa-file-excel" style="color:#217346"></i> Excel</div>
+            <div class="skill-pill"><i class="fas fa-brain" style="color:#f5c842"></i> XGBoost</div>
+          </div>
+        </div>
+
+        <div class="about-cards" data-aos="fade-left">
+          <div class="about-card glass-card">
+            <div class="acard-icon"><i class="fas fa-atom"></i></div>
+            <h3>Scientific Rigor</h3>
+            <p>Physics-trained, hypothesis-driven approach to every analysis.</p>
+          </div>
+          <div class="about-card glass-card">
+            <div class="acard-icon"><i class="fas fa-landmark"></i></div>
+            <h3>Banking Proven</h3>
+            <p>Real experience in compliance, audit readiness, and internal control.</p>
+          </div>
+          <div class="about-card glass-card">
+            <div class="acard-icon"><i class="fas fa-robot"></i></div>
+            <h3>Automation First</h3>
+            <p>30% efficiency gains through Python &amp; Power Query pipelines.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EXPERTISE ===== -->
+  <section id="expertise" class="section section-alt">
+    <div class="container">
+      <div class="sec-header" data-aos="fade-up">
+        <span class="sec-tag">CAPABILITIES</span>
+        <h2 class="sec-title">What I Do <span class="gold">Best</span></h2>
+      </div>
+
+      <div class="exp-grid">
+        <div class="exp-card glass-card" data-aos="fade-up">
+          <div class="exp-num">01</div>
+          <div class="exp-icon"><i class="fas fa-database"></i></div>
+          <h3>Data Engineering</h3>
+          <p>Clean, explore, and prepare data using <strong>Python (Pandas, Polars)</strong> and <strong>Excel / Power
+              Query</strong>. Build bi-weekly pipelines from raw sources to structured formats.</p>
+        </div>
+        <div class="exp-card glass-card" data-aos="fade-up" style="animation-delay:.1s">
+          <div class="exp-num">02</div>
+          <div class="exp-icon"><i class="fas fa-brain"></i></div>
+          <h3>Predictive Modeling</h3>
+          <p>Build <strong>classification &amp; regression models</strong> with XGBoost and Scikit-learn. Interpret with
+            <strong>SHAP values</strong> for business-ready insights.
+          </p>
+        </div>
+        <div class="exp-card glass-card" data-aos="fade-up" style="animation-delay:.2s">
+          <div class="exp-num">03</div>
+          <div class="exp-icon"><i class="fas fa-robot"></i></div>
+          <h3>Workflow Automation</h3>
+          <p><strong>Automate repetitive reports</strong> and data pipelines with Python. Identify inconsistencies via
+            text processing and regex for audit-ready quality.</p>
+        </div>
+        <div class="exp-card glass-card" data-aos="fade-up" style="animation-delay:.3s">
+          <div class="exp-num">04</div>
+          <div class="exp-icon"><i class="fas fa-chart-pie"></i></div>
+          <h3>Data Visualization</h3>
+          <p>Turn raw data into <strong>Power BI dashboards</strong> and <strong>Tableau stories</strong> that drive
+            operational decisions and stakeholder buy-in.</p>
+        </div>
+      </div>
+
+      <!-- Scrolling tech ticker -->
+      <div class="ticker-wrap" data-aos="fade-up">
+        <div class="ticker-track">
+          <span><i class="devicon-python-plain colored"></i> Python</span>
+          <span><i class="devicon-pandas-plain"></i> Pandas</span>
+          <span><i class="devicon-r-plain colored"></i> R</span>
+          <span><i class="fas fa-chart-bar" style="color:#F2C811"></i> Power BI</span>
+          <span><i class="fas fa-table" style="color:#0077b5"></i> Tableau</span>
+          <span><i class="fas fa-database" style="color:#00d4ff"></i> SQL</span>
+          <span><i class="fas fa-file-excel" style="color:#217346"></i> Excel</span>
+          <span><i class="fas fa-brain" style="color:#f5c842"></i> XGBoost</span>
+          <span><i class="fas fa-chart-line" style="color:#00d4ff"></i> SHAP</span>
+          <span><i class="fab fa-google" style="color:#4285f4"></i> BigQuery</span>
+          <!-- duplicate for seamless loop -->
+          <span><i class="devicon-python-plain colored"></i> Python</span>
+          <span><i class="devicon-pandas-plain"></i> Pandas</span>
+          <span><i class="devicon-r-plain colored"></i> R</span>
+          <span><i class="fas fa-chart-bar" style="color:#F2C811"></i> Power BI</span>
+          <span><i class="fas fa-table" style="color:#0077b5"></i> Tableau</span>
+          <span><i class="fas fa-database" style="color:#00d4ff"></i> SQL</span>
+          <span><i class="fas fa-file-excel" style="color:#217346"></i> Excel</span>
+          <span><i class="fas fa-brain" style="color:#f5c842"></i> XGBoost</span>
+          <span><i class="fas fa-chart-line" style="color:#00d4ff"></i> SHAP</span>
+          <span><i class="fab fa-google" style="color:#4285f4"></i> BigQuery</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EXPERIENCE ===== -->
+  <section id="experience" class="section">
+    <div class="container">
+      <div class="sec-header" data-aos="fade-up">
+        <span class="sec-tag">CAREER</span>
+        <h2 class="sec-title">My <span class="gold">Experience</span></h2>
+      </div>
+
+      <div class="timeline">
+
+        <div class="tl-item" data-aos="fade-up">
+          <div class="tl-left">
+            <div class="tl-dot active"></div>
+            <div class="tl-line"></div>
+          </div>
+          <div class="tl-card glass-card">
+            <div class="tl-top">
+              <span class="tl-date"><i class="fas fa-calendar-alt"></i> Aug 2025 – Present</span>
+              <span class="tl-badge current">Current</span>
+            </div>
+            <h3 class="tl-title">Data Analyst – Monitoring &amp; Internal Control</h3>
+            <p class="tl-company"><i class="fas fa-building"></i> Askari Bank Limited | Islamabad, Pakistan</p>
+            <ul class="tl-list">
+              <li>Automated account maintenance cycles using Power Query &amp; Python (Pandas/Polars), improving
+                reporting efficiency by <strong>30%</strong>.</li>
+              <li>Engineered bi-weekly data pipelines from OBI and local servers into structured formats for downstream
+                reporting.</li>
+              <li>Identified data inconsistencies using Python-based text processing and regex for audit and compliance
+                readiness.</li>
+              <li>Built Excel summaries, dashboards, and regular reports for management and stakeholders.</li>
+              <li>Developed performance dashboards to track departmental bottlenecks and operational metrics.</li>
+            </ul>
+            <div class="tl-chips">
+              <span>Python</span><span>Power Query</span><span>Excel</span><span>Pandas</span><span>Polars</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item" data-aos="fade-up">
+          <div class="tl-left">
+            <div class="tl-dot"></div>
+            <div class="tl-line"></div>
+          </div>
+          <div class="tl-card glass-card">
+            <div class="tl-top">
+              <span class="tl-date"><i class="fas fa-calendar-alt"></i> Feb 2025 – Jul 2025</span>
+            </div>
+            <h3 class="tl-title">Physics Instructor</h3>
+            <p class="tl-company"><i class="fas fa-school"></i> Allied Schools | Rawalpindi, Pakistan</p>
+            <ul class="tl-list">
+              <li>Taught physics fundamentals; fostered analytical thinking and evidence-based reasoning in students.
+              </li>
+            </ul>
+            <div class="tl-chips">
+              <span>Teaching</span><span>Physics</span><span>Analytical Thinking</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item" data-aos="fade-up">
+          <div class="tl-left">
+            <div class="tl-dot"></div>
+          </div>
+          <div class="tl-card glass-card">
+            <div class="tl-top">
+              <span class="tl-date"><i class="fas fa-calendar-alt"></i> Sep 2024 – Dec 2024</span>
+            </div>
+            <h3 class="tl-title">Research Intern</h3>
+            <p class="tl-company"><i class="fas fa-flask"></i> National Center of Physics | Islamabad, Pakistan</p>
+            <ul class="tl-list">
+              <li>Ran radiation damage simulations using SRIM; applied material characterization techniques.</li>
+              <li>Assessed material resilience under ion irradiation for material science insights.</li>
+            </ul>
+            <div class="tl-chips">
+              <span>SRIM</span><span>Research</span><span>Data Analysis</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section id="projects" class="section section-alt">
+    <div class="container">
+      <div class="sec-header" data-aos="fade-up">
+        <span class="sec-tag">PORTFOLIO</span>
+        <h2 class="sec-title">My <span class="gold">Projects</span></h2>
+      </div>
+
+      <div class="proj-grid">
+
+        <div class="proj-card glass-card" data-aos="fade-up">
+          <div class="proj-top">
+            <span class="proj-num">01</span>
+            <a href="https://github.com/dino28575" target="_blank" class="proj-gh"><i class="fab fa-github"></i></a>
+          </div>
+          <div class="proj-ico"><i class="fas fa-users-slash"></i></div>
+          <h3>Customer Churn Prediction</h3>
+          <p>End-to-end churn model on a <strong>7,000-row telecom dataset</strong>, achieving <strong>0.65
+              PR-AUC</strong>. Used <code>scale_pos_weight</code> for class imbalance and <strong>SHAP values</strong>
+            to identify key churn drivers.</p>
+          <div class="proj-tags">
+            <span>Python</span><span>XGBoost</span><span>Scikit-learn</span><span>SHAP</span>
+          </div>
+        </div>
+
+        <div class="proj-card glass-card" data-aos="fade-up" style="animation-delay:.1s">
+          <div class="proj-top">
+            <span class="proj-num">02</span>
+            <a href="https://github.com/dino28575/Google_Fibre_Project" target="_blank" class="proj-gh"><i
+                class="fab fa-github"></i></a>
+          </div>
+          <div class="proj-ico"><i class="fas fa-network-wired"></i></div>
+          <h3>Google Fiber Network Analysis</h3>
+          <p><strong>Power BI dashboard</strong> analyzing multi-market customer support call logs to find repeat-call
+            causes and low FCR. Built with <strong>SQL, data modeling, and DAX</strong>.</p>
+          <div class="proj-tags">
+            <span>Power BI</span><span>SQL</span><span>DAX</span>
+          </div>
+        </div>
+
+        <div class="proj-card glass-card" data-aos="fade-up" style="animation-delay:.2s">
+          <div class="proj-top">
+            <span class="proj-num">03</span>
+            <a href="https://github.com/dino28575/IBM-Hr-Attrition-Project" target="_blank" class="proj-gh"><i
+                class="fab fa-github"></i></a>
+          </div>
+          <div class="proj-ico"><i class="fas fa-chart-pie"></i></div>
+          <h3>IBM HR Attrition Analysis</h3>
+          <p>Analyzed IBM HR dataset to identify high-risk departments and demographic attrition trends. Full stack:
+            <strong>BigQuery, Excel, Tableau, R (ggplot2), and Power BI</strong>.
+          </p>
+          <div class="proj-tags">
+            <span>R</span><span>Tableau</span><span>BigQuery</span><span>Power BI</span>
+          </div>
+        </div>
+
+        <div class="proj-card glass-card" data-aos="fade-up" style="animation-delay:.3s">
+          <div class="proj-top">
+            <span class="proj-num">04</span>
+            <a href="https://github.com/dino28575/pakgender" target="_blank" class="proj-gh"><i
+                class="fab fa-github"></i></a>
+          </div>
+          <div class="proj-ico"><i class="fab fa-python"></i></div>
+          <h3>PakGender Python Library</h3>
+          <p>Developed an open-source, pip-installable <strong>Python library</strong> for accurate gender inference of
+            Pakistani and Arabic names. Available on PyPI for NLP workflows.</p>
+          <div class="proj-tags">
+            <span>Python</span><span>NLP</span><span>Open Source</span><span>PyPI</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="proj-cta" data-aos="fade-up">
+        <a href="https://github.com/dino28575" target="_blank" class="btn-ghost">
+          <i class="fab fa-github"></i> View All Projects on GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CERTIFICATIONS ===== -->
+  <section id="certifications" class="section">
+    <div class="container">
+      <div class="sec-header" data-aos="fade-up">
+        <span class="sec-tag">CREDENTIALS</span>
+        <h2 class="sec-title">Certifications &amp; <span class="gold">Education</span></h2>
+      </div>
+
+      <div class="certs-grid">
+        <div class="cert-card glass-card" data-aos="zoom-in">
+          <div class="cert-ico"><i class="fab fa-google"></i></div>
+          <div class="cert-body">
+            <h3>The Nuts and Bolts of Machine Learning</h3>
+            <span>Google &middot; 2026</span>
+          </div>
+          <div class="cert-badge">ML</div>
+        </div>
+        <div class="cert-card glass-card" data-aos="zoom-in" style="animation-delay:.1s">
+          <div class="cert-ico"><i class="fab fa-google"></i></div>
+          <div class="cert-body">
+            <h3>Google Business Intelligence / Data Analytics</h3>
+            <span>Google Professional Certificates &middot; 2025</span>
+          </div>
+          <div class="cert-badge">BI</div>
+        </div>
+        <div class="cert-card glass-card" data-aos="zoom-in" style="animation-delay:.2s">
+          <div class="cert-ico"><i class="fas fa-certificate"></i></div>
+          <div class="cert-body">
+            <h3>Business Intelligence Certification</h3>
+            <span>NIBAF Pakistan &middot; 2025</span>
+          </div>
+          <div class="cert-badge">BI</div>
+        </div>
+        <div class="cert-card glass-card" data-aos="zoom-in" style="animation-delay:.3s">
+          <div class="cert-ico"><i class="fas fa-graduation-cap"></i></div>
+          <div class="cert-body">
+            <h3>Bachelor of Science in Physics</h3>
+            <span>Pakistan</span>
+          </div>
+          <div class="cert-badge">BSc</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" class="section section-alt">
+    <div class="container">
+      <div class="sec-header" data-aos="fade-up">
+        <span class="sec-tag">GET IN TOUCH</span>
+        <h2 class="sec-title">Let's <span class="gold">Connect</span></h2>
+        <p class="sec-sub">Open to Data Analyst opportunities. Let's talk about how I can add value to your team.</p>
+      </div>
+
+      <div class="contact-layout">
+        <div class="contact-links" data-aos="fade-right">
+          <a href="https://github.com/dino28575" target="_blank" class="contact-link glass-card">
+            <div class="cl-icon"><i class="fab fa-github"></i></div>
+            <div class="cl-body">
+              <span class="cl-label">GitHub</span>
+              <span class="cl-val">github.com/dino28575</span>
+            </div>
+            <i class="fas fa-arrow-up-right-from-square cl-arrow"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/sahib-dino-675a90221" target="_blank" class="contact-link glass-card">
+            <div class="cl-icon"><i class="fab fa-linkedin"></i></div>
+            <div class="cl-body">
+              <span class="cl-label">LinkedIn</span>
+              <span class="cl-val">Sahib Dino</span>
+            </div>
+            <i class="fas fa-arrow-up-right-from-square cl-arrow"></i>
+          </a>
+          <a href="SahibCv.06.26.pdf" download class="contact-link glass-card">
+            <div class="cl-icon"><i class="fas fa-file-pdf"></i></div>
+            <div class="cl-body">
+              <span class="cl-label">Resume / CV</span>
+              <span class="cl-val">Download PDF</span>
+            </div>
+            <i class="fas fa-download cl-arrow"></i>
+          </a>
+        </div>
+
+        <div class="contact-card glass-card" data-aos="fade-left">
+          <div class="contact-glow"></div>
+          <h3>Ready to collaborate?</h3>
+          <p>Whether you have a data challenge, a project to discuss, or just want to connect — I'm all ears.</p>
+          <div class="contact-btns">
+            <a href="https://www.linkedin.com/in/sahib-dino-675a90221" target="_blank" class="btn-primary">
+              <i class="fab fa-linkedin"></i> Message on LinkedIn
+            </a>
+            <a href="SahibCv.06.26.pdf" download class="btn-ghost">
+              <i class="fas fa-file-arrow-down"></i> Download CV
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">SD<span class="logo-accent">.</span></div>
+      <p class="footer-tagline">Turning data into decisions — one insight at a time.</p>
+      <div class="footer-socials">
+        <a href="https://github.com/dino28575" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/sahib-dino-675a90221" target="_blank"><i class="fab fa-linkedin"></i></a>
+      </div>
+      <p class="footer-copy">&copy; 2026 Sahib Dino. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
